@@ -61,12 +61,24 @@ The collection also contains the original beginner projects developed during thi
 - `hash-table.cpp`
 
 ### Algorithms
-- `recursion-factorial.cpp`
+
+#### Searching
 - `linear-search.cpp`
 - `binary-search.cpp`
+
+#### Sorting
+
+The sorting programs below are part of the **Algorithms** section and were included as practical training in comparing different sorting approaches:
+
 - `bubble-sort.cpp`
 - `selection-sort.cpp`
 - `insertion-sort.cpp`
+- `heap-sort.cpp`
+
+These exercises focus on understanding how sorting algorithms work step by step, rather than presenting them as production-ready implementations.
+
+#### Recursion
+- `recursion-factorial.cpp`
 
 ## 🧠 Why These Projects Matter
 
@@ -122,7 +134,7 @@ Stacks & Queues
       ↓
 Trees & Graphs
       ↓
-Searching & Sorting
+Searching & Sorting Algorithms
       ↓
 Problem Solving & Algorithms
       ↓
