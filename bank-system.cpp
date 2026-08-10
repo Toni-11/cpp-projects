@@ -1,0 +1,5 @@
+#include <iostream>
+using namespace std;
+void displayBalance(float* balance) { cout << "Your current balance is: $" << *balance << endl; }
+void withdraw(float* balance, float amount) { if (amount <= *balance) { *balance -= amount; cout << "You withdrew: $" << amount << endl; } else cout << "Insufficient balance!" << endl; }
+int main() { float balance = 1000.0; float* ptr = &balance; int choice; do { cout << "\nATM Menu:\n1. Display Balance\n2. Withdraw Money\n3. Exit\nEnter your choice: "; cin >> choice; switch (choice) { case 1: displayBalance(ptr); break; case 2: { float amount; cout << "Enter amount to withdraw: $"; cin >> amount; withdraw(ptr, amount); break; } case 3: cout << "Exiting...\n"; break; default: cout << "Invalid choice. Please try again.\n"; } } while (choice != 3); return 0; }

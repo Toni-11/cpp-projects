@@ -1,0 +1,4 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() { int numcourses; double totalCreditHours = 0.0, totalGradePoints = 0.0; cout << "Enter number of courses:"; cin >> numcourses; for (int i = 0;i < numcourses;i++) { string courseName; int creditHours; char grade; cout << "Enter course name:"; cin >> courseName; cout << "Enter credit hours:"; cin >> creditHours; cout << "Enter grade(A,B,C,D,F):"; cin >> grade; double gradepoints; switch (grade) { case'A': gradepoints = 4.0; break; case 'B': gradepoints = 3.0; case 'C': gradepoints = 2.0; break; case'D': gradepoints = 1.0; break; case'F': gradepoints = 0.0; break; default: cout << "invaild grade.plase enter A,B,C,D or F." << endl; return 1; } totalCreditHours += creditHours; totalGradePoints += creditHours * gradepoints; } double gpa = totalGradePoints / totalCreditHours; cout << "Your Gpa is:" << gpa << endl; return 0; }
