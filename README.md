@@ -1,146 +1,60 @@
-# 💻 C++ Beginner Projects & Data Structures Practice
+# C++ Programming & Data Structures Practice
 
-> A collection of C++ programs developed as practical training during the first year of university, covering programming fundamentals, problem solving, and core data structures and algorithms.
+A structured collection of C++ coursework and hands-on programming practice developed during the early stage of an Artificial Intelligence undergraduate program.
 
-## 📌 About This Repository
+## What this repository contains
 
-This repository represents a stage of learning rather than a collection of production applications.
+### Mini Applications
+- Cashier System
+- Bank / ATM System
+- Calories Calculator
+- GPA Calculator
+- Number Guessing Game
 
-The programs were created as **hands-on practice** while building a strong foundation in C++ during the early university years. The exercises cover everything from basic console programs to pointers, dynamic memory, linked lists, stacks, queues, trees, graphs, hashing, searching, and sorting.
-
-The collection also contains the original beginner projects developed during this period, alongside focused exercises for individual programming and Data Structures concepts.
-
-## 🎯 Learning Objectives
-
-- C++ syntax and program structure
-- Variables, data types, input, and output
-- Conditions and loops
-- Functions
+### Programming Fundamentals
 - Arrays and matrices
 - Strings and structures
 - Pointers and dynamic memory
-- Linked lists
-- Stacks, queues, deques, and priority queues
-- Recursion
-- Searching and sorting algorithms
-- Trees, Binary Search Trees, graphs, and hashing
-- Input validation and defensive programming
-- Problem solving and algorithmic thinking
-
-## 📂 Programs
-
-### Beginner Programming
-- `hello-world.cpp`
-- `guess-number.cpp`
-- `bank-system.cpp`
-- `gpa-calculator.cpp`
-- `calories-calculator.cpp`
-- `cashier-system.cpp`
-- `validated-calculator.cpp`
-
-### Core C++ Concepts
-- `array-operations.cpp`
-- `matrix-operations.cpp`
-- `string-operations.cpp`
-- `struct-student.cpp`
-- `pointer-basics.cpp`
-- `dynamic-memory.cpp`
+- Functions, conditions, loops, and recursion
 
 ### Data Structures
-- `singly-linked-list.cpp`
-- `doubly-linked-list.cpp`
-- `circular-linked-list.cpp`
-- `stack-array.cpp`
-- `queue-array.cpp`
-- `circular-queue.cpp`
-- `deque.cpp`
-- `priority-queue.cpp`
-- `binary-tree-traversal.cpp`
-- `binary-search-tree.cpp`
-- `graph-adjacency-list.cpp`
-- `hash-table.cpp`
+- Singly, doubly, and circular linked lists
+- Stacks and queues
+- Circular queues, deques, and priority queues
+- Binary trees and Binary Search Trees
+- Graphs
+- Hash tables
 
 ### Algorithms
+- Linear and binary search
+- Bubble, selection, insertion, and heap sort
 
-#### Searching
-- `linear-search.cpp`
-- `binary-search.cpp`
+## Repository organization
 
-#### Sorting
+The collection is intentionally presented as academic practice rather than as a set of production applications. Small exercises demonstrate individual concepts, while the mini applications show how those concepts were combined into menu-driven console programs.
 
-The sorting programs below are part of the **Algorithms** section and were included as practical training in comparing different sorting approaches:
+The repository was consolidated from multiple supplied coursework archives. Where the same exercise appeared more than once, one copy is retained. The later Cashier System implementation was preferred because it uses arrays and loops rather than separate variables for each item.
 
-- `bubble-sort.cpp`
-- `selection-sort.cpp`
-- `insertion-sort.cpp`
-- `heap-sort.cpp`
+## Academic context
 
-These exercises focus on understanding how sorting algorithms work step by step, rather than presenting them as production-ready implementations.
+These projects were developed as coursework and practical training in a Faculty of Artificial Intelligence. No team-member names or student IDs are included in the repository documentation.
 
-#### Recursion
-- `recursion-factorial.cpp`
+## Running the programs
 
-## 🧠 Why These Projects Matter
-
-These programs should be evaluated in their academic context. They were created while the student was **still in the early stage of university**, so the goal was primarily to understand programming concepts through implementation.
-
-The repository therefore includes small and focused programs rather than pretending that every exercise is a complete software product.
-
-## 🛠️ Technologies
-
-- **Language:** C++
-- **Application Type:** Console Applications
-- **Development Environment:** Visual Studio / standard C++ compiler
-- **Concepts:** Programming Fundamentals, Data Structures & Algorithms
-
-## ▶️ How to Run
-
-Using g++:
+Use a C++17-compatible compiler, for example:
 
 ```bash
-g++ program-name.cpp -o program
+g++ path/to/program.cpp -std=c++17 -o program
 ./program
 ```
 
-Or open the desired `.cpp` file in Visual Studio, build the project, and run it.
+Or open the desired source file in Visual Studio and build it with a C++17-compatible configuration.
 
-## 📚 Academic Context
+## Repository hygiene
 
-**Stage:** First Year of University  
-**Focus:** C++ Programming & Data Structures  
-**Purpose:** Practical Training and Concept Reinforcement
+Visual Studio caches, `.vs` folders, build output, executables, debug symbols, and other generated files are intentionally excluded from version control.
 
-These exercises formed part of the foundation for later study in Object-Oriented Programming, Data Structures & Algorithms, Software Engineering, Data Analytics, Machine Learning, and Artificial Intelligence.
-
-## 👤 Author
+## Author
 
 **Antton Mikhael**  
 GitHub: [@Toni-11](https://github.com/Toni-11)
-
-## 📈 Learning Progression
-
-```text
-C++ Fundamentals
-      ↓
-Conditions & Loops
-      ↓
-Functions & Arrays
-      ↓
-Pointers & Dynamic Memory
-      ↓
-Linked Lists
-      ↓
-Stacks & Queues
-      ↓
-Trees & Graphs
-      ↓
-Searching & Sorting Algorithms
-      ↓
-Problem Solving & Algorithms
-      ↓
-Advanced Programming & AI
-```
-
----
-
-**Built as part of the journey from programming fundamentals to Data Structures, Algorithms, Software Engineering, and Artificial Intelligence.**
