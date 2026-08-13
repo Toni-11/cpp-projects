@@ -1,64 +1,84 @@
-// GBA_Calculaitor_system.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-#include <iostream> 
+#include <iostream>
+#include <cctype>
+#include <limits>
+
 using namespace std;
 
 int main()
 {
-    int numCourses = 0;
-    float totalPoints = 0.0;
-    float totalCredits = 0.0;
+    int numCourses;
 
     cout << "Enter the number of courses: ";
-    cin >> numCourses;
+    while (!(cin >> numCourses) || numCourses <= 0)
+    {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Please enter a positive number of courses: ";
+    }
+
+    double totalPoints = 0.0;
+    int totalCredits = 0;
 
     for (int i = 0; i < numCourses; i++)
     {
-        char grade = ' ';
-        int credits = 0;
+        char grade;
+        int credits;
 
-        cout << "Enter grade for course " << (i + 1) << " (A, B, C, D, F): ";
+        cout << "\nEnter grade for course " << (i + 1)
+             << " (A, B, C, D, F): ";
         cin >> grade;
 
-        while (grade < 'A' || grade > 'F')
+        grade = static_cast<char>(toupper(static_cast<unsigned char>(grade)));
+
+        while (grade != 'A' && grade != 'B' &&
+               grade != 'C' && grade != 'D' &&
+               grade != 'F')
         {
-            cout << "Invalid grade entered. Please try again " << endl;
-            cout << "Enter grade for course " << (i + 1) << " (A, B, C, D, F): ";
+            cout << "Invalid grade. Please enter A, B, C, D, or F: ";
             cin >> grade;
+            grade = static_cast<char>(
+                toupper(static_cast<unsigned char>(grade))
+            );
         }
+
         cout << "Enter credit hours for course " << (i + 1) << ": ";
-        cin >> credits;
+        while (!(cin >> credits) || credits <= 0)
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Please enter positive credit hours: ";
+        }
 
-        float gradePoint = 0;
+        double gradePoint;
 
-        if (grade == 'A' || grade == 'a')
+        switch (grade)
         {
-            gradePoint = 4.0;
-        }
-        else if (grade == 'B' || grade == 'b')
-        {
-            gradePoint = 3.0;
-        }
-        else if (grade == 'C' || grade == 'c')
-        {
-            gradePoint = 2.0;
-        }
-        else if (grade == 'D' || grade == 'd')
-        {
-            gradePoint = 1.0;
-        }
-        else if (grade == 'F' || grade == 'f')
-        {
-            gradePoint = 0.0;
+            case 'A':
+                gradePoint = 4.0;
+                break;
+            case 'B':
+                gradePoint = 3.0;
+                break;
+            case 'C':
+                gradePoint = 2.0;
+                break;
+            case 'D':
+                gradePoint = 1.0;
+                break;
+            case 'F':
+                gradePoint = 0.0;
+                break;
+            default:
+                gradePoint = 0.0;
         }
 
         totalPoints += gradePoint * credits;
         totalCredits += credits;
     }
 
-    float gpa = (totalCredits > 0) ? (totalPoints / totalCredits) : 0.0;
+    double gpa = totalPoints / totalCredits;
 
-    cout << "Your GPA is: " << gpa << endl;
+    cout << "\nYour GPA is: " << gpa << endl;
 
     return 0;
 }
