@@ -1,11 +1,28 @@
-# Source Notes
+# Source Review Notes
 
-## Original archive
-The original C++ archive contained multiple implementations of the GPA Calculator and Cashier System exercises. Because this repository is intended to present the training collection without duplicate entries, one representative implementation of each repeated exercise is kept.
+## Scope
+This repository was compared against the supplied C++ coursework archives, including `cpp-beginner-projects-final.zip` and `C++ Projects Level 1`.
 
-The archive also contained `Guessgame.cpp`, but that file was empty (0 bytes), so it was not included.
+## Consolidation
+The existing repository already contained the core beginner applications and the Data Structures / Algorithms practice set. The supplied Level 1 archive also contained several Visual Studio projects for the same exercises.
 
-## Added practice exercises
-The additional files are focused educational examples covering the C++ and Data Structures concepts the student confirmed they practiced during the first year.
+The repeated projects are therefore treated as a single collection rather than separate portfolio projects:
 
-They are intentionally small, independent console programs rather than production applications.
+- Cashier System
+- Bank / ATM System
+- Calories Calculator
+- GPA Calculator
+- Number Guessing Game
+
+Where multiple implementations existed, the later/clearer coursework version was used as the reference. In particular, the later Cashier implementation uses arrays and loops instead of separate variables for each item.
+
+## Data Structures & Algorithms
+The repository retains one copy of each focused implementation covering arrays, matrices, strings, structures, pointers, dynamic memory, linked lists, stacks, queues, deques, priority queues, trees, graphs, hashing, searching, sorting, and recursion.
+
+## Excluded material
+The Level 1 archive contains Visual Studio caches, `.vs` folders, build output, executables, debug symbols, intermediate objects, database files, and other generated IDE artifacts. These are not source code and should not be added to the repository.
+
+## Academic presentation
+Selected mini applications were accompanied by coursework presentations/documentation. The repository documentation uses their project descriptions without reproducing team-member names or student IDs.
+
+These projects are presented as academic coursework and hands-on practice completed in a Faculty of Artificial Intelligence. They are learning artifacts, not claims of production-ready software.
