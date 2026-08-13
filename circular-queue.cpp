@@ -1,4 +1,0 @@
-#include <iostream>
-using namespace std;
-class CircularQueue{static const int MAX=5;int a[MAX];int frontIndex=-1,rearIndex=-1;public:bool isEmpty()const{return frontIndex==-1;}bool isFull()const{return !isEmpty()&&(rearIndex+1)%MAX==frontIndex;}void enqueue(int value){if(isFull()){cout<<"Queue is full\n";return;}if(isEmpty())frontIndex=0;rearIndex=(rearIndex+1)%MAX;a[rearIndex]=value;}void dequeue(){if(isEmpty()){cout<<"Queue is empty\n";return;}cout<<"Dequeued: "<<a[frontIndex]<<'\n';if(frontIndex==rearIndex)frontIndex=rearIndex=-1;else frontIndex=(frontIndex+1)%MAX;}};
-int main(){CircularQueue q;q.enqueue(10);q.enqueue(20);q.dequeue();q.enqueue(30);q.dequeue();}

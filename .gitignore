@@ -1,0 +1,29 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.vcxproj.user
+x64/
+Debug/
+Release/
+out/
+build/
+
+# Compiled binaries
+*.exe
+*.out
+*.obj
+*.o
+*.pdb
+*.ilk
+*.idb
+*.log
+*.tlog/
+
+# IDE / editor
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
