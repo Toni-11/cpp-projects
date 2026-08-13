@@ -1,4 +1,83 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
-int main() { string item1="",item2="",item3="",item4="",item5=""; double price1=0,price2=0,price3=0,price4=0,price5=0; int itemCount=0,choice=0; do { cout << "\nCashier System Menu:\n1. Add Item\n2. Display Items\n3. Payment\n4. Exit\nEnter a number: "; cin >> choice; while(choice<1||choice>4){cout<<"Invalid choice. Please choose 1-4: ";cin>>choice;} if(choice==1){if(itemCount>=5) cout<<"Cannot add more items. Maximum limit (5).\n"; else {string itemName;double itemPrice;cout<<"Enter item name: ";cin>>itemName;cout<<"Enter item price: ";cin>>itemPrice; if(itemCount==0){item1=itemName;price1=itemPrice;}else if(itemCount==1){item2=itemName;price2=itemPrice;}else if(itemCount==2){item3=itemName;price3=itemPrice;}else if(itemCount==3){item4=itemName;price4=itemPrice;}else{item5=itemName;price5=itemPrice;} itemCount++;}} else if(choice==2){double total=0; if(itemCount>=1){cout<<item1<<" - $"<<price1<<endl;total+=price1;}if(itemCount>=2){cout<<item2<<" - $"<<price2<<endl;total+=price2;}if(itemCount>=3){cout<<item3<<" - $"<<price3<<endl;total+=price3;}if(itemCount>=4){cout<<item4<<" - $"<<price4<<endl;total+=price4;}if(itemCount>=5){cout<<item5<<" - $"<<price5<<endl;total+=price5;}cout<<"Total: $"<<total<<endl;} else if(choice==3){double total=0;if(itemCount>=1)total+=price1;if(itemCount>=2)total+=price2;if(itemCount>=3)total+=price3;if(itemCount>=4)total+=price4;if(itemCount>=5)total+=price5;double payment;cout<<"Enter payment amount: ";cin>>payment;if(payment<total)cout<<"Error payment. Please pay at least $"<<total<<endl;else cout<<"Change = $"<<payment-total<<endl;} }while(choice!=4); return 0; }
+
+int main() {
+    const int MAX_ITEMS = 5;
+    string items[MAX_ITEMS];
+    double prices[MAX_ITEMS]{};
+    int itemCount = 0;
+    int choice = 0;
+
+    do {
+        cout << "\nCashier System Menu:\n"
+             << "1. Add Item\n"
+             << "2. Display Items\n"
+             << "3. Payment\n"
+             << "4. Exit\n"
+             << "Enter a number: ";
+        cin >> choice;
+
+        while (choice < 1 || choice > 4) {
+            cout << "Invalid choice. Please choose 1-4: ";
+            cin >> choice;
+        }
+
+        if (choice == 1) {
+            if (itemCount >= MAX_ITEMS) {
+                cout << "Cannot add more items. Maximum limit (5).\n";
+                continue;
+            }
+
+            string itemName;
+            double itemPrice;
+            cout << "Enter item name: ";
+            cin >> itemName;
+            cout << "Enter item price: ";
+            cin >> itemPrice;
+
+            if (itemPrice < 0) {
+                cout << "Price cannot be negative.\n";
+                continue;
+            }
+
+            items[itemCount] = itemName;
+            prices[itemCount] = itemPrice;
+            ++itemCount;
+            cout << "Added: " << itemName << " - $" << itemPrice << '\n';
+        }
+        else if (choice == 2) {
+            double total = 0.0;
+            cout << "\nItems in the cart:\n";
+            for (int i = 0; i < itemCount; ++i) {
+                cout << items[i] << " - $" << prices[i] << '\n';
+                total += prices[i];
+            }
+            cout << "Total: $" << total << '\n';
+        }
+        else if (choice == 3) {
+            double total = 0.0;
+            for (int i = 0; i < itemCount; ++i) {
+                total += prices[i];
+            }
+
+            double payment;
+            cout << "Enter payment amount: ";
+            cin >> payment;
+
+            if (payment < total) {
+                cout << "Insufficient payment. Please pay at least $" << total << '\n';
+            } else {
+                cout << "Payment = $" << payment << '\n'
+                     << "Cost = $" << total << '\n'
+                     << "Change = $" << payment - total << '\n';
+            }
+        }
+        else {
+            cout << "Exiting the system. Thank you for shopping!\n";
+        }
+    } while (choice != 4);
+
+    return 0;
+}
