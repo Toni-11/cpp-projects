@@ -7,6 +7,7 @@ This repository combines:
 - Small console applications
 - Data structures implementations
 - Searching and sorting algorithms
+- Selected project presentations and supporting documentation
 
 The collection was cleaned before publication: duplicated implementations and Visual Studio generated/build files were removed, while the strongest available version of repeated mini-applications was retained.
 
@@ -45,7 +46,8 @@ The collection was cleaned before publication: duplicated implementations and Vi
 │
 └── docs/
     ├── academic-context.md
-    └── mini-applications.md
+    ├── mini-applications.md
+    └── presentations/
 ```
 
 ## Featured Mini Applications
@@ -54,7 +56,7 @@ The collection was cleaned before publication: duplicated implementations and Vi
 A console-based cashier application demonstrating arrays, menu-driven interaction, product storage, total calculation, payment processing, and change calculation.
 
 ### GPA Calculator
-A console application for calculating GPA from course grades and credit hours.
+A console application for calculating GPA from course grades and credit hours, with input validation for grades and credit-hour values.
 
 ### Bank / ATM System
 A simple ATM simulation demonstrating functions, pointers, loops, menu interaction, balance display, and withdrawal validation.
@@ -63,7 +65,7 @@ A simple ATM simulation demonstrating functions, pointers, loops, menu interacti
 A food-calorie lookup and calculation application using the C++ `map` container and quantity-based calorie calculation.
 
 ### Number Guessing Game
-A simple random-number guessing game demonstrating random number generation, input validation, loops, and conditional logic.
+A simple random-number guessing game demonstrating modern random number generation, input validation, loops, and conditional feedback based on the distance from the target.
 
 More context is available in [`docs/mini-applications.md`](docs/mini-applications.md).
 
@@ -94,6 +96,7 @@ The repository includes standalone implementations/examples for:
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
+- Heap Sort
 
 ## Fundamentals
 
@@ -108,11 +111,20 @@ Examples cover:
 - Input Validation
 - Basic console programs
 
+## Presentations & Documentation
+
+The [`docs/presentations/`](docs/presentations/) directory contains the available original project presentations, including Cashier System, ATM Machine Simulation, Number Guessing Game, and Calories Calculator. These materials are kept as project evidence and may contain the original team/member information from the academic submissions.
+
+Additional summaries and academic context are available in:
+- [`docs/mini-applications.md`](docs/mini-applications.md)
+- [`docs/academic-context.md`](docs/academic-context.md)
+- [`SOURCE-NOTES.md`](SOURCE-NOTES.md)
+
 ## Academic Context
 
 The projects in this repository represent coursework and programming practice completed during study in the **Faculty of Artificial Intelligence**.
 
-The repository intentionally focuses on the technical work and does not list individual student names or team-member information.
+The source-code organization focuses on the technical work, while the original presentation files are preserved separately as supporting project documentation.
 
 ## How to Run
 
